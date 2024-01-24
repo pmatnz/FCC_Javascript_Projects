@@ -20,26 +20,30 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthtext = document.querySelector("#monsterHealth");
 //monsterHealth element
 
+const locations = [
+	{
+		name: "town square",
+		"button text": ["Go to store", "Go to cave", "Fight dragon"],
+		"button functions": [goStore, goCave, fightDragon],
+		text: 'You are in the town square. You see a sign that says "Store" .',
+	},
+	{
+		name: "store",
+		"button text": [
+			"Buy 10 health (10 gold)",
+			"Buy weapon (30 gold)",
+			"Go to town square",
+		],
+		"button functions": [buyHealth, buyWeapon, goTown],
+		text: "You enter the Store.",
+	},
+];
+
 function goTown() {
-	button1.innerText = "Buy 10 health (10 gold)";
-	button2.innerText = "Buy weapon (30 gold)";
-	button3.innerText = "Go to town square";
-	text.innerText = "You enter the Store.";
-	button1.onclick = buyHealth;
-	button2.onclick = buyWeapon;
-	button3.onclick = goTown;
+	update(locations[0]);
 }
 
-function goStore() {
-	// using innerText will change the button to the below
-	button1.innerText = "Buy 10 health (10 gold)";
-	button2.innerText = "Buy weapon (30 gold)";
-	button3.innerText = "Go to town square";
-	text.innerText = "You enter the Store.";
-	button1.onclick = buyHealth;
-	button2.onclick = buyWeapon;
-	button3.onclick = goTown;
-}
+function goStore() {}
 
 function goCave() {
 	// using innerText will change the button to the below
@@ -49,6 +53,16 @@ function goCave() {
 function fightDragon() {
 	// using innerText will change the button to the below
 	button3.innerText = "Go to town square";
+}
+
+function update(location) {
+	button1.innerText = location["button text"][0];
+	button2.innerText = location["button text"][1];
+	button3.innerText = location["button text"][2];
+	button1.onclick = location["button functions"][0];
+	button2.onclick = location["button functions"][1];
+	button3.onclick = location["button functions"][2];
+	text.innerText = location.text;
 }
 
 function buyHealth() {}
