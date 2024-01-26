@@ -117,9 +117,9 @@ function buyWeapon() {
 			currentWeapon++;
 			goldText.innerText = gold;
 			let newWeapon = weapons[currentWeapon].name;
-			text.innerText = "You now have a " + newWeapon + ".";
+			text.innerText = `You now have a ${newWeapon} .`; //"You now have a " + newWeapon + ".";
 			inventory.push(newWeapon);
-			text.innerText += " In your inventory you have: " + inventory;
+			text.innerText += ` In your inventory you have: ${inventory} `; //" In your inventory you have: " + inventory;
 		} else {
 			text.innerText = "You do not have enough gold to buy a weapon.";
 		}
@@ -135,8 +135,8 @@ function sellWeapon() {
 		gold += 15;
 		goldText.innerText = gold;
 		let currentWeapon = inventory.shift(); // I already have a currentWeapon variable however this is in the scope of the if statement, the other variable is a global variable. Using var would cause both to be global
-		text.innerText = "You sold a " + currentWeapon + ".";
-		text.innerText = " In your invetory you have" + inventory;
+		text.innerText = `You sold a ${currentWeapon} .`; // "You sold a " + currentWeapon + ".";
+		text.innerText = ` In your inventory you have ${inventory}`; //" In your invetory you have" + inventory;
 	} else {
 		if (inventory.length <= 1) {
 			text.innerText = "Don't sell your only weapon!";
@@ -147,6 +147,11 @@ function sellWeapon() {
 function goFight() {
 	update(locations[3]);
 	monsterHealth = monsters[fighting].health;
+	/* monsterHealth takes in all the data from the monters variable, it then will look at fighting which dictates what number index of the array we are looking at, then it will look at the 
+	health of the monster via the object and return the health that is next to the health object*/
+	monsterStats.style.display = "block";
+	monsterName.innerText = monsters[fighting].name;
+	monsterHealthtext.innerText = monsters[fighting].health;
 }
 
 function fightDragon() {
@@ -164,9 +169,34 @@ function fightBeast() {
 	goFight();
 }
 
-function attack() {}
+// prettier-ignore
+function attack() {
+	text.innerText = `The ${monsters[fighting].name} attacks, `;
+	text.innerText += ` You attack it with your ${weapons[currentWeapon].name}! `;
+	health -= monsters[fighting].level;
+	monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+	healthText.innerText = health;
+	monsterHealthtext.innerText = monsterHealth;
+	if (health <= 0) {
+		lose()
+	} else if (monsterHealth <= 0) {
+		defeatMonster()
+	};
+}
 
-function dodge() {}
+function dodge() {
+	text.innerText = ` You dodge the attack from the ${monsters[fighting].name} `;
+}
+
+function lose() {}
+
+function defeatMonster() {
+	gold += Math.floor(monsters[fighting].level * 6.7);
+	xp += monsters[fighting].level;
+	goldText.innerText = gold;
+	xpText.innerText = xp;
+	update(locations[4]);
+}
 
 button1.onclick = goStore; //using the goStore variable on mouse click
 button2.onclick = goCave; //using the goCave variable on mouse click
