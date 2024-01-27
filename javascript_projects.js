@@ -228,7 +228,7 @@ function attack() {
 				} */
 		} 
 	
-		if (Math.random() <= .1 && inventory.length !== 1) {
+	if (Math.random() <= .1 && inventory.length !== 1) {
 		text.innerText += ` Your  ${inventory.pop()}  breaks.`; // Your + inventory.pop() + breaks.
 		currentWeapon --; // this is going to remove 1 off the current weapon
 		};
@@ -281,26 +281,30 @@ function easterEgg() {
 }
 
 function pick(guess) {
-	const numbers = [];
+	let numbers = [];
 	while (numbers.length < 10) {
 		numbers.push(Math.floor(Math.random() * 11));
 	}
 	text.innerText = `You picked ${guess} . Here are the random numbers:\n`;
+
 	for (let i = 0; i < 10; i++) {
 		// created a variable x, when x is less than 5 , add 1 to x - a counter
-		text.innnerText += numbers[i] + "\n";
-		if (numbers.includes(guess)){
-			text.innerText += "Right! You win 20 gold!";
-			gold += 20;
-			goldText.innerText = gold;
-		} else {
-			text.innerText += "Wrong! You lose 10 health!";
-			health -= 10;
-			healthText = health;
-		} if (health <= 0){
-			lose();
-		}
-		
+		text.innerText += numbers[i] + "\n";
+	}
+
+	if (numbers.includes(guess)) {
+		text.innerText += "Right! You win 20 gold!";
+		gold += 20;
+		goldText.innerText = gold;
+	} else {
+		text.innerText += "Wrong! You lose 10 health!";
+		health -= 10;
+		healthText.innerText = health;
+	}
+
+	if (health <= 0) {
+		lose();
+	}
 }
 
 function pickTwo() {
