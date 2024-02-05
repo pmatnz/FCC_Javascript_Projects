@@ -1,0 +1,2 @@
+# FCC_javascript_projects
+FreeCodeCamp Javascript Projects
