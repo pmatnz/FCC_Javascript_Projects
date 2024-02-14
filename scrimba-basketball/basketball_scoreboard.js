@@ -58,3 +58,7 @@ plusTwoAway.addEventListener("click", addTwoAway);
 plusThreeAway.addEventListener("click", addThreeAway);
 
 resetButton.addEventListener("click", resetScore);
+
+for (let i = 0; i < cards.length; i++) {
+	cardsEl.textContent += cards[i] + " ";
+}
