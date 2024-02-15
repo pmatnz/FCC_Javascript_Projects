@@ -52,3 +52,17 @@ inputBtn.addEventListener("click", function () {
 	localStorage.setItem("myLeads", JSON.stringify(myLeads)); //pulling the saved data from local storage then transforming it back from a string into an array
 	render(myLeads);
 });
+
+const container1 = document.getElementById("container");
+
+const imgs = ["images/hip1.jpg", "images/hip2.jpg", "images/hip3.jpg"];
+
+function renderImages() {
+	let holdArray = []; // adding everything to the array for storage
+	for (let i = 0; i < imgs.length; i++) {
+		holdArray.push(`<img class="team-img" src="${imgs[i]}">`);
+	}
+	container1.innerHTML += holdArray; // pushing the array data into the html all at once , not over an over via the loop
+}
+
+renderImages();
