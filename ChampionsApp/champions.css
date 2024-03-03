@@ -1,0 +1,157 @@
+html,
+body {
+	padding: 0;
+	height: 844px;
+	width: 390px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	background-color: #1b1924;
+}
+
+#endorse-input {
+	margin-top: 35%;
+	position: relative;
+}
+
+#endorse-text {
+	padding: 45px 80px;
+	margin: 10px auto;
+	display: block;
+	background-color: #444059;
+	color: #ffffff;
+	font-size: larger;
+	margin-top: 10px;
+	border: none;
+	border-radius: 8px;
+}
+
+#endorse-text:hover,
+#endorse-button:hover,
+#to-button:hover,
+#from-button:hover {
+	cursor: pointer;
+	border: solid white 2px;
+}
+
+#endorse-button {
+	padding: 15px 120px;
+	background-color: #28a9f1;
+	text-align: center;
+	margin-left: 35px;
+	font-size: x-large;
+	font-weight: bolder;
+	border: none;
+	border-radius: 8px;
+}
+
+#to-button {
+	background-color: #444059;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+}
+
+#toandfrom {
+	margin-left: 27px;
+	padding-bottom: 20px;
+}
+
+#from-button {
+	background-color: #444059;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+}
+
+.boxes1 {
+	width: 317px;
+	height: 72px;
+	border: solid 1px black;
+	margin: 12px auto;
+	display: flex;
+	background-color: #ffffff;
+}
+
+.boxes2 {
+	width: 317px;
+	height: 100px;
+	border: solid 1px black;
+	margin: auto;
+	display: flex;
+	background-color: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	position: relative;
+	color: #ffffff;
+}
+
+h1 {
+	text-align: center;
+	position: relative;
+	top: 140px;
+	/* Adjust the value as needed */
+}
+
+img {
+	position: absolute;
+	width: 180px;
+	height: 130px;
+}
+
+#image {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+	gap: 10px;
+}
+
+ul li {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	border-radius: 8px;
+	padding: 10px;
+	font-size: 20px;
+	margin-top: 10px;
+	word-break: break-all;
+	width: 317px;
+	margin-left: 30px;
+	position: relative;
+}
+
+ul li:hover {
+	cursor: pointer;
+}
+
+li h4 {
+	text-align: left;
+	margin: 0;
+}
+
+.count {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.emoji {
+	position: absolute;
+	/* Set position to absolute */
+	bottom: 0;
+	right: 10px;
+	margin-bottom: 10px;
+}

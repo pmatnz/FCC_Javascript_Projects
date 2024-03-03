@@ -1,0 +1,71 @@
+body {
+	padding: 0;
+	height: 844px;
+	width: 390px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	background-color: #1b1924;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: #ffffff;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+#email {
+	margin-left: 33px;
+}
+
+#register {
+	margin-left: 150px;
+}
+
+#loginButton {
+	margin-left: 75px;
+	margin-top: 10px;
+}
+
+#password {
+	margin-left: 5px;
+}
+
+#email {
+	margin-left: 35px;
+}
+
+h1 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: xx-large;
+	margin-left: 75px;
+}

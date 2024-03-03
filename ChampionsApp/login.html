@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Endorsements Login</title>
+		<link rel="stylesheet" href="login.css" />
+	</head>
+	<body>
+		<h1 style="text-align: center">Endorsements Login</h1>
+		<form id="login-form">
+			<div class="container">
+				<label for="username-input" class="labels">Username</label>
+				<input
+					type="text"
+					placeholder="Enter Username"
+					name="username"
+					id="username-input"
+					autocomplete="username"
+					required
+				/>
+				<label for="password-input" class="labels">Password</label>
+				<input
+					type="password"
+					placeholder="Enter Password"
+					name="password"
+					id="password-input"
+					autocomplete="current-password"
+					required
+				/>
+				<button type="button" id="submit-btn">Login</button>
+				<button type="reset" class="cancelbtn" id="cancel-btn">Cancel</button>
+				<a href="#" id="register"> Register </a>
+			</div>
+		</form>
+		<script src="login.js" type="module"></script>
+	</body>
+</html>

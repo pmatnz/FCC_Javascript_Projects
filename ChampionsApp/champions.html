@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Endorsments List</title>
+		<link rel="stylesheet" href="champions.css" />
+	</head>
+
+	<body>
+		<div id="image">
+			<img src="assets/freddie.png" id="freddie" alt="Computers Image" />
+		</div>
+		<div id="headingContainer">
+			<h1>Endorsments List</h1>
+		</div>
+		<section id="endorse-input">
+			<div id="input-container">
+				<textarea
+					type="text"
+					id="endorse-text"
+					placeholder="Write your endorsment here"
+				></textarea>
+				<div id="toandfrom">
+					<input id="to-button" placeholder="To" class="tofrom" />
+					<input id="from-button" placeholder="From" class="tofrom" />
+				</div>
+				<button id="endorse-button">Publish</button>
+			</div>
+			<section id="endorse-output">
+				<div id="output-container">
+					<h2>- Endorsements -</h2>
+					<h3 id="empty"></h3>
+					<ul id="list-inputs"></ul>
+				</div>
+			</section>
+		</section>
+		<script src="champions.js" type="module"></script>
+	</body>
+</html>
