@@ -69,3 +69,9 @@ h1 {
 	font-size: xx-large;
 	margin-left: 75px;
 }
+
+#login-exists {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-align: center;
+	margin-left: 60px;
+}

@@ -25,6 +25,7 @@ const endorseList = document.getElementById("list-inputs");
 const noEndors = document.getElementById("empty");
 const toInput = document.getElementById("to-button");
 const fromInput = document.getElementById("from-button");
+const logoutBtn = document.getElementById("logout");
 
 //*************CODE BODY AN FUNCTIONS***********************
 // checking if DB has values, converts snapshot into an array
@@ -111,3 +112,7 @@ function publishEndors(input) {
 		counter.textContent = currentCount + 1;
 	});
 }
+
+logoutBtn.addEventListener("click", function () {
+	window.location.href = "http://127.0.0.1:5500/ChampionsApp/login.html";
+});

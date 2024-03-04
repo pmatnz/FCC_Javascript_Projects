@@ -29,15 +29,18 @@ const registerbtn = document.getElementById("register");
 
 //**************JS CODE*******************/
 registerbtn.addEventListener("click", function () {
-	//??????NEED TO ADD IF STATEMENT TO ENSURE VALUES HAVE BEEN ENTERED,USE POPUP IF NOT???????????
-	Promise;
-	let userNameinfo = usernameBtn.value;
-	let passwordinfo = passwordBtn.value;
-	let emailinfo = emailAddress.value;
-	push(username, userNameinfo);
-	push(password, passwordinfo);
-	push(email, emailinfo);
-	window.location.href = "http://127.0.0.1:5500/ChampionsApp/champions.html";
+	if (!usernameBtn.value || !passwordBtn.value || !emailAddress.value) {
+		alert("missing values please fill in all fields");
+	} else {
+		let userNameinfo = usernameBtn.value;
+		let passwordinfo = passwordBtn.value;
+		let emailinfo = emailAddress.value;
+		push(username, userNameinfo);
+		push(password, passwordinfo);
+		push(email, emailinfo);
+		alert("Please login with your new details");
+		window.location.href = "http://127.0.0.1:5500/ChampionsApp/login.html";
+	}
 });
 
 loginBtn.addEventListener("click", function () {
